@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.js"></script>
+    <body style="text-align: center">
+        <div style="margin-right: auto;margin-left: auto">
+            <form id="form" method="post" action="/ServletAndJSP/demo/register">
+                用户名&ensp;&ensp;:<input id="userName" name="userName" type="text"><br/>
+                密&ensp;&ensp;&ensp;&ensp;码:<input id="password" name="password" type="password"><br/>
+                确认密码:<input id="surePassword" type="password" name="surePassword"><br/>
+                手机号码:<input id="phone" type="text" name="phone"><br/>
+                邮箱地址:<input id="email" type="email" name="email"><br/>
+                <br/>
+                <input type="submit" value="注册" onclick="return check()">
+            </form>
+        </div>
+    </body>
+    <script>
+        function check() {
+            var password = $("#password").val();
+            var surePassword = $("#surePassword").val();
+            if (password != surePassword){
+                alert("两次输入的密码不一致!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</html>
