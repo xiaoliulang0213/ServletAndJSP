@@ -15,9 +15,9 @@ public class LoginController extends HttpServlet{
 
     private final String filePath = "e:/userInformation";
     private final String ERROR_VIEW = "error.view";
-    private final String SUCCESS_VIEW = "/ServletAndJSP/welcome.jsp";
+    private final String SUCCESS_VIEW = "main";
 
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+    private void loginRequest(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         String userName = req.getParameter("userName");
         String password = req.getParameter("password");
@@ -30,8 +30,19 @@ public class LoginController extends HttpServlet{
             req.setAttribute("errors",errors);
             req.getRequestDispatcher(ERROR_VIEW).forward(req,resp);
         }else{
-            resp.sendRedirect(SUCCESS_VIEW);
+            req.getSession().setAttribute("userName",userName);
+            req.getRequestDispatcher(SUCCESS_VIEW).forward(req,resp);
         }
+    }
+
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        loginRequest(req,resp);
+    }
+
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        loginRequest(req,resp);
     }
 
     /**
