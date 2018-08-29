@@ -28,7 +28,7 @@ public class Main extends HttpServlet{
         printWriter.println("<title>会员登录成功</title>");
         printWriter.println("</head>");
         printWriter.println("<body>");
-        printWriter.println("<h1>会员"+req.getSession().getAttribute("userName")+"你好</h1><br/>");
+        printWriter.println("<h1>会员"+req.getSession().getAttribute("userName")+"你好</h1><a href='/ServletAndJSP/logout'>注销</a><br/>");
         printWriter.println("<form method='post' action = '/ServletAndJSP/message'><br/>");
         printWriter.println("分享新鲜事....<br/>");
         String blabla = req.getParameter("blabla");
