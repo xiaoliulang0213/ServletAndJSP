@@ -12,9 +12,24 @@
         <servlet-name>Hello</servlet-name>
         <url-pattern>/demo</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletConfig</servlet-name>
+        <servlet-class>com.liuxiaonian.ServletConfig.ServletConfigServlet</servlet-class>
+        <init-param>
+            <param-name>name1</param-name>
+            <param-value>value1</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletConfig</servlet-name>
+        <url-pattern>/ServletConfig</url-pattern>
+    </servlet-mapping>
+
+
     <!--欢迎页面配置-->
     <welcome-file-list>
-        <welcome-file>welcome.jsp</welcome-file>
+        <welcome-file>/demo/login/loginManage.html</welcome-file>
     </welcome-file-list>
 
     <!--配置MIME类型-->
