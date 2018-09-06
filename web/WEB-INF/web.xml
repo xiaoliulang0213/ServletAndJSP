@@ -3,6 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <!--监听器配置-->
+    <listener>
+        <listener-class>com.liuxiaonian.demo.listener.ServletContextListenerTest</listener-class>
+    </listener>
     <!--Servlet映射配置-->
     <servlet>
         <servlet-name>Hello</servlet-name>
