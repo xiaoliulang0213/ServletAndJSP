@@ -22,7 +22,7 @@ public class MessageServlet extends HttpServlet{
         req.setCharacterEncoding("UTF-8");
         String blabla = req.getParameter("blabla");
         if (blabla != null && blabla.length() !=0){
-            if (blabla.length() < 10){
+            if (blabla.length() < 100){
                 String userName =(String) req.getSession().getAttribute("userName");
                 addMessage(userName,blabla);
                 resp.sendRedirect(MAIN_VIEW);

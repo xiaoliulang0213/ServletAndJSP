@@ -35,7 +35,7 @@ public class Main extends HttpServlet{
         if (blabla == null){
             blabla = "";
         }else {
-            printWriter.println("<span style='color:red'>信息要10字之内</span><br/>");
+            printWriter.println("<span style='color:red'>信息要100字之内</span><br/>");
         }
         printWriter.println("<textarea cols='60' rows='4' name='blabla'></textarea><br/>");
         printWriter.println("<button type='submit'>送出</button>");
