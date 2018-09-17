@@ -1,4 +1,4 @@
-package com.liuxiaonian.demo.listener;
+package com.liuxiaonian.listerner;
 
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
