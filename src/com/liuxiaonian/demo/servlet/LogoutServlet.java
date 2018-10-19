@@ -1,15 +1,23 @@
-package com.liuxiaonian.demo.controller;
+package com.liuxiaonian.demo.servlet;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(value = "/logout")
+@WebServlet(urlPatterns = {"/demo/logout"},
+        initParams = {
+            @WebInitParam(name = "LOGIN_VIEW",value = "/demo/login/loginManage.html")
+        })
 public class LogoutServlet extends HttpServlet{
-    private static final String LOGIN_VIEW = "/ServletAndJSP/demo/login/loginManage.html";
+    private String login_view;
+
+    public void init() throws ServletException{
+        this.login_view = getServletConfig().getInitParameter("LOGIN_VIEW");
+    }
 
     /**
      * @Author chengpunan
@@ -23,7 +31,7 @@ public class LogoutServlet extends HttpServlet{
         if (httpServletRequest.getSession().getAttribute("userName") != null){
             httpServletRequest.getSession().invalidate();
         }
-        httpServletResponse.sendRedirect(LOGIN_VIEW);
+        httpServletResponse.sendRedirect(login_view);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

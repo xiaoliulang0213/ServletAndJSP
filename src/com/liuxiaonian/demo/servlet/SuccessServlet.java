@@ -1,4 +1,4 @@
-package com.liuxiaonian.demo.controller;
+package com.liuxiaonian.demo.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet("/demo/success.view")
-public class SuccessController extends HttpServlet{
+public class SuccessServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         String userName = req.getParameter("userName");
@@ -23,7 +23,7 @@ public class SuccessController extends HttpServlet{
         printWriter.println("</head>");
         printWriter.println("<body>");
         printWriter.println("<h1>会员"+req.getParameter("userName")+"注册成功</h1>");
-        printWriter.println("<a href='/ServletAndJSP/demo/login/loginManage.html'>返回登录页面</a>");
+        printWriter.println("<a href='/demo/login/loginManage.html'>返回登录页面</a>");
         printWriter.println("</body>");
         printWriter.println("</html>");
         printWriter.close();

@@ -1,4 +1,4 @@
-package com.liuxiaonian.demo.controller;
+package com.liuxiaonian.demo.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet("/demo/error.view")
-public class ErrorController extends HttpServlet{
+public class ErrorServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
@@ -29,7 +29,7 @@ public class ErrorController extends HttpServlet{
             printWriter.println("<li>"+error+"</li>");
         }
         printWriter.println("</ul>");
-        printWriter.println("<a href='/ServletAndJSP/demo/register/registerManage.html'>·µ»Ø×¢²áÒ³Ãæ</a>");
+        printWriter.println("<a href='/demo/login/loginManage.html'>·µ»ØµÇÂ½Ò³Ãæ</a>");
         printWriter.println("</body>");
         printWriter.println("</html>");
         printWriter.close();
