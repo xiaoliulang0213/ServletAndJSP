@@ -59,7 +59,8 @@
     <!--欢迎页面配置-->
     <welcome-file-list>
         <!--<welcome-file>/demo/login/loginManage.html</welcome-file>-->
-        <welcome-file>/demo/register/registerManage.html</welcome-file>
+        <!--<welcome-file>/demo/register/registerManage.html</welcome-file>-->
+        <welcome-file>/welcome.jsp</welcome-file>
     </welcome-file-list>
 
     <!--配置MIME类型-->

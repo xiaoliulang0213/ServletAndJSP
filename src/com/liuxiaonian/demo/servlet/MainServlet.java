@@ -20,20 +20,20 @@ public class MainServlet extends HttpServlet{
         PrintWriter printWriter = resp.getWriter();
         printWriter.println("<html>");
         printWriter.println("<head>");
-        printWriter.println("<title>»áÔ±µÇÂ¼³É¹¦</title>");
+        printWriter.println("<title>ä¼šå‘˜ç™»å½•æˆåŠŸ</title>");
         printWriter.println("</head>");
         printWriter.println("<body>");
-        printWriter.println("<h1>»áÔ±"+req.getSession().getAttribute("userName")+"ÄãºÃ</h1><a href='/demo/logout'>×¢Ïú</a><br/>");
+        printWriter.println("<h1>ä¼šå‘˜"+req.getSession().getAttribute("userName")+"ä½ å¥½</h1><a href='/demo/logout'>æ³¨é”€</a><br/>");
         printWriter.println("<form method='post' action = '/demo/message'><br/>");
-        printWriter.println("·ÖÏíĞÂÏÊÊÂ....<br/>");
+        printWriter.println("åˆ†äº«æ–°é²œäº‹....<br/>");
         String blabla = req.getParameter("blabla");
         if (blabla == null){
             blabla = "";
         }else {
-            printWriter.println("<span style='color:red'>ĞÅÏ¢Òª100×ÖÖ®ÄÚ</span><br/>");
+            printWriter.println("<span style='color:red'>ä¿¡æ¯è¦100å­—ä¹‹å†…</span><br/>");
         }
         printWriter.println("<textarea cols='60' rows='4' name='blabla'></textarea><br/>");
-        printWriter.println("<button type='submit'>ËÍ³ö</button>");
+        printWriter.println("<button type='submit'>é€å‡º</button>");
         printWriter.println("</form>");
         printWriter.println("<tbody>");
         UserServiceImpl userServiceImpl = (UserServiceImpl) getServletContext().getAttribute("userService");
@@ -44,7 +44,7 @@ public class MainServlet extends HttpServlet{
             printWriter.println((String) req.getSession().getAttribute("userName")+"<br>");
             printWriter.println(messages.get(date)+"<br>");
             printWriter.println(dateFormat.format(date));
-            printWriter.println("<a href='/demo/delete?message="+date.getTime()+"'>É¾³ı</a>");
+            printWriter.println("<a href='/demo/delete?message="+date.getTime()+"'>åˆ é™¤</a>");
             printWriter.println("<hr></td></tr>");
         }
         printWriter.println("</tbody>");
