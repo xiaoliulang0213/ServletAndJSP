@@ -76,4 +76,37 @@
             <encoding>UTF-8</encoding>
         </locale-encoding-mapping>
     </locale-encoding-mapping-list>
+    
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>utf-8</page-encoding>
+            <default-content-type>text/html</default-content-type>
+            <!--缓冲区大小-->
+            <buffer>16kb</buffer>
+        </jsp-property-group>
+    </jsp-config>
+
+    <!--<jsp-config>-->
+        <!--<jsp-property-group>-->
+            <!--<url-pattern>*.jsp</url-pattern>-->
+            <!--&lt;!&ndash;-忽略换行&ndash;&gt;-->
+            <!--<trim-directive-whitespaces>true</trim-directive-whitespaces>-->
+        <!--</jsp-property-group>-->
+    <!--</jsp-config>-->
+
+    <!--<jsp-config>-->
+        <!--<jsp-property-group>-->
+            <!--<url-pattern>*.jsp</url-pattern>-->
+            <!--<include-prelude>jsp/test/date.jsp</include-prelude>-->
+            <!--<include-coda>jsp/test/test.jsp</include-coda>-->
+        <!--</jsp-property-group>-->
+    <!--</jsp-config>-->
+    <!--禁用Scriptlet-->
+    <!--<jsp-config>-->
+        <!--<jsp-property-group>-->
+            <!--<url-pattern>*.jsp</url-pattern>-->
+            <!--<scripting-invalid>true</scripting-invalid>-->
+        <!--</jsp-property-group>-->
+    <!--</jsp-config>-->
 </web-app>
