@@ -19,11 +19,11 @@ public class SuccessServlet extends HttpServlet{
         printWriter.println("<html>");
         printWriter.println("<head>");
         printWriter.println("<meta content='text/html;charset=UTF-8' http-equiv='content-type'>");
-        printWriter.println("<title>会员注册成功</title>");
+        printWriter.println("<title>浼氬憳娉ㄥ唽鎴愬姛</title>");
         printWriter.println("</head>");
         printWriter.println("<body>");
-        printWriter.println("<h1>会员"+req.getParameter("userName")+"注册成功</h1>");
-        printWriter.println("<a href='/demo/login/loginManage.html'>返回登录页面</a>");
+        printWriter.println("<h1>浼氬憳"+req.getParameter("userName")+"娉ㄥ唽鎴愬姛</h1>");
+        printWriter.println("<a href='/demo/login/loginManage.html'>杩斿洖鐧诲綍椤甸潰</a>");
         printWriter.println("</body>");
         printWriter.println("</html>");
         printWriter.close();

@@ -109,4 +109,12 @@
             <!--<scripting-invalid>true</scripting-invalid>-->
         <!--</jsp-property-group>-->
     <!--</jsp-config>-->
+
+    <!--配置EL表达式-->
+    <!--<jsp-config>-->
+        <!--<jsp-property-group>-->
+            <!--<url-pattern>*.jsp</url-pattern>-->
+            <!--<el-ignored>true</el-ignored>-->
+        <!--</jsp-property-group>-->
+    <!--</jsp-config>-->
 </web-app>
