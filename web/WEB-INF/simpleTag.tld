@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>simpleTag</short-name>
+    <uri>http://com.liuxiaonian.simpleTag</uri>
+    <tag>
+        <name>if</name>
+        <tag-class>com.liuxiaonian.SimpleTag.IfTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>test</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>forEach</name>
+        <tag-class>com.liuxiaonian.SimpleTag.ForEachTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>items</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.util.Collection</type>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>choose</name>
+        <tag-class>com.liuxiaonian.SimpleTag.ChooseTag</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+
+    <tag>
+        <name>when</name>
+        <tag-class>com.liuxiaonian.SimpleTag.WhenTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>test</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>boolean</type>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>otherwise</name>
+        <tag-class>com.liuxiaonian.SimpleTag.OtherwiseTag</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+</taglib>
