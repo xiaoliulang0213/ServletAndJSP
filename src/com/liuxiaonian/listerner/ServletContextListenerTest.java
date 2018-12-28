@@ -4,11 +4,11 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 public class ServletContextListenerTest implements ServletContextListener{
-    //WEBÓ¦ÓÃ³ÌĞò³õÊ¼»¯
+    //WEBåº”ç”¨ç¨‹åºåˆå§‹åŒ–
     public void contextInitialized(ServletContextEvent sce) {
         System.err.println("aaa");
     }
-    //WEBÓ¦ÓÃ³ÌĞòÏú»ÙÖ®Ç°
+    //WEBåº”ç”¨ç¨‹åºé”€æ¯ä¹‹å‰
     public void contextDestroyed(ServletContextEvent sce) {
     }
 }

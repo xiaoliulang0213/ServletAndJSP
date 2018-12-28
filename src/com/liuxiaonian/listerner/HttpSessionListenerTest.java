@@ -6,10 +6,10 @@ import javax.servlet.http.HttpSessionListener;
 
 @WebListener
 public class HttpSessionListenerTest implements HttpSessionListener{
-    
+
     /**
      * @Author chengpunan
-     * @Description ´´½¨SessionÊ±µ÷ÓÃ
+     * @Description åˆ›å»ºSessionæ—¶è°ƒç”¨
      * @Date 10:11 2018/9/4
      * @Param [se]
      * @return void
@@ -18,7 +18,7 @@ public class HttpSessionListenerTest implements HttpSessionListener{
     }
     /**
      * @Author chengpunan
-     * @Description Ïú»êSessionÊ±µ÷ÓÃ
+     * @Description é”€é­‚Sessionæ—¶è°ƒç”¨
      * @Date 10:12 2018/9/4
      * @Param [se]
      * @return void
